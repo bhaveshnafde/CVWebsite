@@ -111,7 +111,7 @@
               <article class="post">
 
                 <div class="post-thumbnail">
-                  <img src="img/blog/blog_post_1_full.jpg" alt="image">
+                  <img src="img/blog/blog_post_2_full.jpg" alt="image">
                 </div>
 
                 <div class="post-content">
@@ -119,11 +119,11 @@
                   <header class="entry-header">
                     <!-- Entry meta -->
                     <div class="entry-meta entry-meta-top">
-                      <span><a href="#" rel="category tag">Data Science</a></span>
+                      <span><a href="#" rel="category tag">Big Data</a></span>
                     </div>
                     <!-- /Entry meta -->
 
-                    <h2 class="entry-title">Whats GCP BigQuery?</h2>
+                    <h2 class="entry-title">Whats Big Data?</h2>
                   </header>
                   <!-- /Entry header -->
 
@@ -133,53 +133,45 @@
                       <div class=" col-xs-12 col-sm-12 ">
                         <div class="col-inner">
 
-                          <blockquote class="quote">BigQuery is a Petabyte scale data analytics warehouse by Google Cloud Platform. It's a combination of two services - SQL Query Engine and managed storage for data.
+                          <blockquote class="quote">Big Data refers to the dynamic, large and disparate volumes of data being created by people, tools, and machines. It requires new, innovative, and scalable technology to collect, host, and analytically process the vast amount of data gathered to derive real-time business insights
+                            that relate to consumers, risk, profit, performance, productivity management, and enhanced shareholder value.
                           </blockquote>
-
-                          <ul>
-                         <li>BigQuery uses a cache to store your pre-computed result.</li>
-                         <li>uses parallel computing at scale.</li>
-                         <li>BigQuery uses googles colossus file system to store data.</li>
-                         <li>works with bulk data ingestion and streaming data ingestion</li>
-                         <li>BigQuery is most efficient when using BigQuerys own native storage.</li>
-                         <li>using the web UI of big query we can just run a part of code by using run selected by selecting the part and using run selected,</li>
-                         <li>also, if we select a database name SQL query and press ctrl + win we can get the schema of all the database it contains.</li>
-                         <li>you can preview data with preview tab in web UI instead of running a SQL cmd for it.</li>
-                         <li>you can work with external data sources such as google sheets to run the query directly but that is not recommended.</li>
-                         <li>but you can use cloud dataflow to transform ingested data.</li>
-                         <li>BigQuery natively supports arrays and structs as data types.</li>
-                         <li>BQ natively supports GIS(Geographical Information Systems) functions.</li>
-                         <li>BQ GeoViz is a geo-visual tool for analyzing geospatial data.</li>
-                        </ul>
                         <br>
-                        <h3>BigQuery ML CheatSheet</h3><br>
+                        <h3>The 5 important V's of Big Data - </h3><br>
                           <ol>
-                           <li><strong>Label:</strong> alias a column as 'label' or specify the column in OPTIONS using input_label_cols. you need to label afield as the label or pass an already exiting field as the label in input_label_cols.</li>
-                           <li><strong>Feature:</strong> Passed to the model as part of your SQL statement.</li>
-                           <li><strong>Model:</strong> an object stored in your BQ dataset.</li>
-                           <li><strong>Model Types:</strong> Linear Regression, Logistic Regression.</li>
-                           <li><strong>ML .FEATURE_INFO:</strong> give you analytics of the features you passed to the model.</li>
-                           <li><strong>ML .TRAINING_INFO:</strong> gives you the training progress.</li>
-                           <li><strong>ML .WEIGHTS:</strong> give you the weights of each column, the more close the weights are to -1 or 1 the better the column is.</li>
-                           <li><strong>ML .EVALUATE:</strong> evaluates your model performance.</li>
-                           <li><strong>ML .PREDICT:</strong> give the predictions on the data from your model.</li>
+                           <li><strong>Velocity :</strong> the speed at which data accumulates.</li>
+                           <li><strong>Volume :</strong> a scale of data. drivers are an increase in data sources, Higher resolution sensors, Scalable Infrastructure.</li>
+                           <li><strong>Variety :</strong> diversity of data, structured - unstructured, different source, different format etc. drivers - wearables, mobiles, geological, video etc.</li>
+                           <li><strong>Veracity :</strong> quality in the origin of data, and its conformity to facts and accuracy Attributes - consistency, completeness, integrity, ambiguity.</li>
+                           <li><strong>value :</strong> Value is our ability and need to turn data into value. Value isn't just profit. It may have medical or social benefits, as well as customer, employee, or personal satisfaction. </li>
                          </ol>
+
                          <br>
-                         <ul>
-                           <li><strong>create/train your model.</strong> </li>
-                                CREATE OR REPLACE MODEL &lt;dataset&gt;.&lt;name&gt;<br>
-                                OPTIONS(model_type = '&lt;type&gt;') AS <br>
-                                &lt;training_dataset&gt;
-                            <li><strong>evaluate</strong> </li>
-                                FROM <br>
-                                ML.EVALUATE(MODEL 'model_name', TABLE table_name)
-                            <li><strong>predict/classify</strong> </li>
-                                FROM <br>
-                                ML.PREDICT(MODEL 'model_name', TABLE table_name) <br>
-                                AS predict
-                         </ul>
+                         <h3>what is Hadoop?</h3>
+                         <p>Larry Page and Sergy Brin from google were trying to solve their page rank algorithm which meant dealing with all the webpages in the world, <br>
+                         so they came up with a rather simple approach, they divided data into clusters and send these small clusters to machines, <br>
+                         each machine would apply the same algorithm to these clusters which are called mapping and then would return the result and the result would be  <br>
+                         combined which is called reduce, yahoo hired Doug cutting who just replicated googles big data program and named it Hadoop.</p>
                          <br>
-                         <p>This article is not exactly blog style but these are my notes while taking a course on GCP BigQuery.</p>
+
+                        <h3>What is Data Mining and the Steps involved in data mining?</h3>
+                        <p><br><strong>1. Establishing Data Mining Goals :</strong>
+                            The expected level of accuracy and usefulness of data is to be established as achieving more accuracy is directly proportional to the cost spent on achieving it. and after a certain level, one doesn't gain much more even after processing the data.
+                            <br><strong>2. Selection of data :</strong>
+                            The output of data mining is largely based upon the quality of data being used, there are times when the data is not readily available at that time one can use surveys to get that data, and selecting the right data is very important as the cost increases with more and more data you use.
+                            <br><strong>3. Pre Processing data :</strong>
+                            Raw data often contains irrelevant and erroneous information, so that has to be removed, and in case of randomly missing data simple solutions can be deployed but if data is missing systematically then it would lead to systematic biases in analytics so one must consider in advance if such data will be included or not in analysis.
+                            <br><strong>4. Transforming data :</strong>
+                            After the relevant attributes of data have been retained, this step involves reducing the number of attributes which requires to transform data, several algorithms are deployed like principal component analysis,
+                            which can reduce the number of attributed without significant loss in information in addition to this various variables need to be transformed for example continuous variable can be transformed into a categorical variable.
+                            <br><strong>5. Storing of data :</strong>
+                            Efficient reading/writing from the database is required, hence data must be stored in such a manner where it is protected and the reading/writing is efficient.
+                            <br><strong>6. Mining data:</strong>
+                            after the above steps, the data is subjected to data mining in which data analysis methods both parametric and non-parametric, machine learning algorithm. data visualization should be performed before processing further to understand the trends in data.
+                            <br><strong>7. Evaluating mining results :</strong>
+                            After results have been extracted from data mining, a formal evaluation is done which tests the predictive capabilities of the model and sees how efficient and effective the model is, this is known as In sample forecast.
+                            <br><br><strong>Note -</strong> Data mining is an iterative process where better algorithms are deployed in each iteration and stakeholders feedback is also taken into account
+                            </p>
                         </div>
                       </div>
                     </div>
@@ -190,7 +182,7 @@
                     <div class="date-author">
                       <span class="entry-date">
                         <a href="#" rel="bookmark">
-                          <i class="far fa-clock"></i> <span class="entry-date"> April 26, 2020</span>
+                          <i class="far fa-clock"></i> <span class="entry-date"> April 20, 2020</span>
                         </a>
                       </span>
                       <span class="author vcard">

@@ -1210,7 +1210,7 @@
 
                       <form id="contact_form" class="contact-form" action="contact_form/mailer.php" method="post">
 
-                        <div class="messages"></div>
+                        
 
                         <div class="controls two-columns">
                           <div class="fields clearfix">

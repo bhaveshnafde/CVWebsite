@@ -1205,9 +1205,10 @@
                       <!-- <div id="map" class="map"></div> -->
                       <div class="block-title">
                         <h3>How Can I <span>Help You?</span></h3>
+                        <h2><?= $result; ?></h2>
                       </div>
 
-                      <form id="contact_form" class="contact-form" action="contact_form/contact_form.php" method="post">
+                      <form id="contact_form" class="contact-form" action="contact_form/mailer.php" method="post">
 
                         <div class="messages"></div>
 
@@ -1245,7 +1246,7 @@
                             </div>
                           </div>
 
-                          <div class="g-recaptcha" data-sitekey="6LdE4u4UAAAAADI9Lcgmmi3t3e7IUPvQMjS5TvCs"></div>
+                          <!-- <div class="g-recaptcha" data-sitekey="6LdE4u4UAAAAADI9Lcgmmi3t3e7IUPvQMjS5TvCs"></div> -->
 
                           <input type="submit" class="button btn-send" value="Send message">
                         </div>

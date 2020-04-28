@@ -1,10 +1,6 @@
 <?php
 
 // configure
-$from = 'admin@bhaveshnaphade.in'; // Replace it with Your Hosting Admin email. REQUIRED!
-$sendTo = 'naphadebhavesh99@gmail.com'; // Replace it with Your email. REQUIRED!
-$subject = 'New message from contact form';
-$fields = array('name' => 'Name', 'email' => 'Email', 'subject' => 'Subject', 'message' => 'Message'); // array variable name => Text to appear in the email. If you added or deleted a field in the contact form, edit this array.
 $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
 $errorMessage = 'There was an error while submitting the form. Please try again later';
 
@@ -24,22 +20,29 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
 
         try
         {
-            $emailText = nl2br("You have new message from Contact Form\n");
+            $result=""
+            require 'PHPMailerAutoload.php';
+            $mail = new PHPMailer;
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+            $mail->SMTPAuth = true;
+            $mail->SMTPSecure = 'tls';
+            $mail->Username = 'admin@bhaveshnaphade.in';
+            $mail->Password = 'bhavesh1999B';
 
-            foreach ($_POST as $key => $value) {
+            $mail->setFrom($_POST['email'],$_POST['name']);
+            $mail->addAddress('naphadebhavesh99@gmail.com');
+            $mail->addReplyTo($_POST['email'],$_POST['name']);
 
-                if (isset($fields[$key])) {
-                    $emailText .= nl2br("$fields[$key]: $value\n");
-                }
+            $mail->isHTML(true);
+            $mail->Subject = 'Form Submission : '.$_POST['subject'];
+            $mail->Body='<h1 align = center>Name:'.$_POST['name'].'<br>Email:'.$_POST['email'].'<br>Message:'.$_POST['message'].'</h1>';
+
+            if(!$mail->send()){
+                $result = "Something went wrong";
+            }else{
+                $result = "Thank You ".$_POST['name']."For contatcing us.";
             }
-
-            $headers = array('Content-Type: text/html; charset="UTF-8";',
-                'From: ' . $from,
-                'Reply-To: ' . $from,
-                'Return-Path: ' . $from,
-            );
-
-            mail($sendTo, $subject, $emailText, implode("\n", $headers));
 
             $responseArray = array('type' => 'success', 'message' => $okMessage);
         }

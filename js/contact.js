@@ -65,6 +65,7 @@ const config = {
             firebasePush(inputEmail, name, subject, message);
 
             //shows alert if everything went well.
+            grecaptcha.reset();;
             return alert('Thanks ${name} for getting in touch. I will get back to you soon.');
         })
     }

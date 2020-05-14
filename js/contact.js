@@ -69,6 +69,7 @@ const config = {
             //shows alert if everything went well.
             grecaptcha.reset();
             submit.setAttribute("disabled", "");
-            return alert('Thanks ${name.value} for getting in touch. I will get back to you soon.');
+            var message = 'Thanks ${name.value} for getting in touch. I will get back to you soon.'
+            return alert(message);
         })
     }

@@ -1366,9 +1366,9 @@
                             </div>
                           </div>
 
-                           <div class="g-recaptcha" data-sitekey="6LdE4u4UAAAAADI9Lcgmmi3t3e7IUPvQMjS5TvCs"></div>
+                           <div class="g-recaptcha" data-sitekey="6LdE4u4UAAAAADI9Lcgmmi3t3e7IUPvQMjS5TvCs" id="recaptcha" ></div>
 
-                          <button type="submit" class="button btn-send" >Send Message</button>
+                          <button type="submit" disabled="disabled" class="button btn-send" >Send Message</button>
                         </div>
                       </form>
                     </div>
@@ -1405,6 +1405,7 @@
 
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key"></script>
 
     <script src='js/perfect-scrollbar.min.js'></script>
     <script src='js/jquery.shuffle.min.js'></script>
@@ -1415,7 +1416,11 @@
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
-
+    <script type="text/javascript">
+	       function recaptcha_callback() {
+	       $('#recaptcha').removeAttr('disabled');
+	        };
+	 </script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>

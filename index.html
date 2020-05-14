@@ -1305,7 +1305,7 @@
 
                       <div class="lm-info-block gray-default">
                         <i class="lnr lnr-envelope"></i>
-                        <h4><a href="mailto:contact@bhaveshnaphade.in">contact@bhaveshnaphade.in</a></h4>
+                        <h4><a href="mailto:bhaveshnaphade99@gmail.com">bhaveshnaphade99@gmail.com</a></h4>
                         <span class="lm-info-block-value"></span>
                         <span class="lm-info-block-text"></span>
                       </div>
@@ -1326,10 +1326,9 @@
                       <!-- <div id="map" class="map"></div> -->
                       <div class="block-title">
                         <h3>How Can I <span>Help You?</span></h3>
-                        <h2><?= $result; ?></h2>
                       </div>
 
-                      <form class="contact-form" action="contact_form/contact_form.php" method="post">
+                      <form class="form-inline contact-form" id="contactForm">
 
                         <div class="messages"></div>
 
@@ -1337,21 +1336,21 @@
                           <div class="fields clearfix">
                             <div class="left-column">
                               <div class="form-group form-group-with-icon">
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Name is required.">
+                                <input id="name" type="text" name="inputEmail" class="form-control" placeholder="" required="required" data-error="Name is required.">
                                 <label>Full Name</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
 
                               <div class="form-group form-group-with-icon">
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required.">
+                                <input id="email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required.">
                                 <label>Email Address</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
 
                               <div class="form-group form-group-with-icon">
-                                <input id="form_subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="Subject is required.">
+                                <input id="subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="Subject is required.">
                                 <label>Subject</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
@@ -1359,7 +1358,7 @@
                             </div>
                             <div class="right-column">
                               <div class="form-group form-group-with-icon">
-                                <textarea id="form_message" name="message" class="form-control" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                <textarea id="message" name="message" class="form-control" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
                                 <label>Message</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
@@ -1367,9 +1366,9 @@
                             </div>
                           </div>
 
-                          <!-- <div class="g-recaptcha" data-sitekey="6LdE4u4UAAAAADI9Lcgmmi3t3e7IUPvQMjS5TvCs"></div> -->
+                           <div class="g-recaptcha" data-sitekey="6LdE4u4UAAAAADI9Lcgmmi3t3e7IUPvQMjS5TvCs"></div>
 
-                          <input type="submit" class="button btn-send" value="Send message">
+                          <button type="submit" class="button btn-send" >Send Message</button>
                         </div>
                       </form>
                     </div>
@@ -1413,24 +1412,16 @@
     <script src='js/owl.carousel.min.js'></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
-    <script src="js/jquery.googlemap.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <!-- <script src="js/contact.js"></script> -->
+    <script src="js/contact.js"></script>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script> -->
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
 
-
-=======
->>>>>>> parent of 76b42dd... j
-=======
->>>>>>> parent of ac06243... Revert "q"
   </body>
 </html>

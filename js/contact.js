@@ -8,6 +8,8 @@ const inputEmail = form.querySelector('#email');
 const name = form.querySelector('#name');
 const subject = form.querySelector('#subject');
 const message = form.querySelector('#message');
+const submit = form.querySelector('#recaptcha')
+
 
 //config your firebase push
 const config = {
@@ -65,7 +67,8 @@ const config = {
             firebasePush(inputEmail, name, subject, message);
 
             //shows alert if everything went well.
-            grecaptcha.reset();;
+            grecaptcha.reset();
+            submit.setAttribute("disabled", "");
             return alert('Thanks ${name} for getting in touch. I will get back to you soon.');
         })
     }

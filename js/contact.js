@@ -1,11 +1,5 @@
 'use strict';
 
-grecaptcha.ready(function() {
-    grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
-       ...
-    });
-});
-
 
 const form = document.querySelector('.form-inline');
 
